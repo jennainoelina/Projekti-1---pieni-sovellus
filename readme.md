@@ -1,15 +1,12 @@
 # Projektin nimi ja tekijät
-*projektin nimi*
-Tekijänä Jenna Vahviala 
+Projekti "Treenipäiväkirja" luojana Jenna Vahviala.
 
 ## Verkkolinkit:
 Pääset julkaistuun sovellukseen osoitteessa ...
 Linkki projektin videoesittelyyn ...
 
 ## Työn jakautuminen 
-Miten työmäärä jaettiin? Kuka teki mitä? Miten yhteistyö sujui?
-
-Loin sovelluksen yksin.
+Jenna Vahviala loi ja koodasi sovelluksen yksin.
 
 ## Oma arvio työstä ja oman osaamisen kehittymisestä
 Mielestäni onnistuin...
@@ -40,7 +37,10 @@ Mutta yleisesti ottaen nautin kyllä tästä kurssista, tehtävistä ja opetukse
 - [Lisenssi](#lisenssi)
 
 ## Tietoja sovelluksesta
-[Projektin nimi] on sovellus, joka ...
+Treenipäiväkirja on sovellus, johon pystyy lisäämään tietoja tehdyistä treeneistä. Lisätyt tiedot näkee taulukoista jaoteltuna omiin kategorioihinsa.
+Kategorioita on x määrä: juoksu, pyöräily, sali, ratsastus ...?
+Kaikkiin kategorioihin lisätään päivämäärä, käytetty aika sekä halutessaan kommentoida treeniä. Juoksuun ja pyöräilyyn saa lisäksi lisättyä keskinopeuden.
+Salitreeniin ei saa lisättyä muuta infoa. Ratsastuksessa voi valita kouluratsastuksen, esteratsastuksen, maaston ja maastoesteratsastuksen väliltä.
 
 ## Tunnetut virheet/bugit
 Kerro jos tiedät sovelluksessa olevan jotain, mikä ei toimi tai toimii heikosti
