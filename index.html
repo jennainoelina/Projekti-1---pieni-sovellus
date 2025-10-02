@@ -3,7 +3,7 @@
 <html lang="fi">
 
 <head>
-	<title>Sovellus</title>
+	<title>Treenipäiväkirja</title>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" href="tyylit.css" />
 </head>
@@ -12,10 +12,109 @@
 
 <body>
 
+	<!-- Otsikko ja quote -->
     <h1>Treenipäiväkirja</h1>
     <h3>"Paras treeni on se, jonka teet."</h3>
 
-    
+	<!-- Nappulat Lisää ja Poista -->
+	<button class="lisaa">Lisää uusi treeni</button>
+	<button class="poista">Poista treeni</button>
+
+	<!-- Treenitaulukot -->
+	<div class="taulukot">
+		<table class="sali">
+			<tr>
+				<th colspan="3">Salitreeni</th>
+			</tr>
+			<tr>
+				<th>Päivämäärä</th>
+				<th>Treeniaika</th>
+				<th>Kommentti</th>
+			</tr>
+			<tr>
+				<td>01.10.2015</td>
+				<td>30 min</td>
+				<td>Yläkroppa</td>
+			</tr>
+			<tr>
+				<td>02.10.2025</td>
+				<td>45 min</td>
+				<td>Alakroppa</td>
+			</tr>
+		</table>
+
+		<table class="juoksu">
+			<tr>
+				<th colspan="4">Juokseminen</th>
+			</tr>
+			<tr>
+				<th>Päivämäärä</th>
+				<th>Treeniaika</th>
+				<th>Keskinopeus (km/h)</th>
+				<th>Kommentti</th>
+			</tr>
+			<tr>
+				<td>01.10.2015</td>
+				<td>30 min</td>
+				<td>9.0</td>
+				<td>...</td>
+			</tr>
+			<tr>
+				<td>02.10.2025</td>
+				<td>45 min</td>
+				<td>8.5</td>
+				<td>...</td>
+			</tr>
+		</table>
+
+		<table class="pyoraily">
+			<tr>
+				<th colspan="4">Pyöräily</th>
+			</tr>
+			<tr>
+				<th>Päivämäärä</th>
+				<th>Treeniaika</th>
+				<th>Keskinopeus (km/h)</th>
+				<th>Kommentti</th>
+			</tr>
+			<tr>
+				<td>01.10.2015</td>
+				<td>30 min</td>
+				<td>9.0</td>
+				<td>...</td>
+			</tr>
+			<tr>
+				<td>02.10.2025</td>
+				<td>45 min</td>
+				<td>8.5</td>
+				<td>...</td>
+			</tr>
+		</table>
+
+		<table class="ratsastus">
+			<tr>
+				<th colspan="4">Ratsastus</th>
+			</tr>
+			<tr>
+				<th>Päivämäärä</th>
+				<th>Treeniaika</th>
+				<th>Laji</th>
+				<th>Kommentti</th>
+			</tr>
+			<tr>
+				<td>01.10.2015</td>
+				<td>30 min</td>
+				<td>Esteratsastus</td>
+				<td>Valmennus</td>
+			</tr>
+			<tr>
+				<td>02.10.2025</td>
+				<td>45 min</td>
+				<td>Kouluratsastus</td>
+				<td>Itsenäinen</td>
+			</tr>
+		</table>
+	</div>
 
 </body>
 

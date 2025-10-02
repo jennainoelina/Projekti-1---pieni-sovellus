@@ -1,0 +1,56 @@
+body {
+    background-color: rgb(34, 65, 143);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-spacing: 0px;;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+    font-size: 50px;
+}
+
+h3 {
+    color: white;
+    text-align: center;
+}
+
+/* Napuuloiden sijoitus ja ulkoasu */
+button {
+    display: inline-block; ?????
+}
+
+.lisaa, .poista {
+    display: block;
+    margin: 50px auto;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
+    border-style: solid;
+    border-radius: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+}
+
+/* Taulukkojen sijoitus ja muotoilu*/
+.taulukot {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.taulukot th, td {
+    padding: 10px;
+    border: solid 1px;
+    background-color: white;
+}
+
+table {
+    border-spacing: 0px;
+    width: 100%;
+    margin: 40px 0;
+}
