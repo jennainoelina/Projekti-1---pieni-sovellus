@@ -16,13 +16,13 @@ h3 {
     text-align: center;
 }
 
-/* Napuuloiden sijoitus ja ulkoasu */
-button {
-    display: inline-block; ?????
+/* Nappuloiden sijoitus ja ulkoasu */
+.nappulat {
+    text-align: center;
 }
 
 .lisaa, .poista {
-    display: block;
+    display: inline-block;
     margin: 50px auto;
     padding: 10px;
     padding-left: 20px;
