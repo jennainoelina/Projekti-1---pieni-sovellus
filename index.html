@@ -22,6 +22,40 @@
 		<button class="poista">Poista treeni</button>
 	</div>
 
+	<!-- Ponnahdusikkuna -->
+	 <div id="ponnahdusikkuna" class="ikkuna">
+		<div class="ikkunatiedot">
+
+			<span class="sulje">&times;</span> <!-- ruksi ikkunassa -->
+			<h3>Lisää uusi treeni</h3>
+
+			<!-- Kategorian valinta -->
+			 <label for="kategoria">Laji: </label><br>
+			 <select id="kategoria">
+				<option value="juokseminen">Juoksu</option>
+				<option value="pyoraily">Pyöräily</option>
+				<option value="sali">Salitreeni</option>
+				<option value="ratsastus">Ratsastus</option>
+			 </select><br><br>
+
+			<!-- Yhteiset kentät -->
+			<label for="paivamaara">Päivämäärä: </label><br>
+			<input type="date" id="paivamaara"><br><br>
+
+
+			<label for="kesto">Kesto (min): </label><br>
+			<input type="number" id="kesto"><br><br>
+
+			<div id="lisakentat"></div> <!-- Lisäkentät -->
+
+			<label for="lisatiedot">Lisätiedot: </label><br>
+			<textarea id="lisatiedot" rows="3"></textarea><br><br>
+
+			<button id="tallenna">Tallenna</button>
+
+		</div>
+	 </div>
+
 	<!-- Treenitaulukot -->
 	<div class="taulukot">
 		<table class="sali">
@@ -31,7 +65,7 @@
 			<tr>
 				<th>Päivämäärä</th>
 				<th>Treeniaika</th>
-				<th>Kommentti</th>
+				<th>Lisätiedot</th>
 			</tr>
 			<tr>
 				<td>01.10.2015</td>
@@ -53,7 +87,7 @@
 				<th>Päivämäärä</th>
 				<th>Treeniaika</th>
 				<th>Keskinopeus (km/h)</th>
-				<th>Kommentti</th>
+				<th>Lisätiedot</th>
 			</tr>
 			<tr>
 				<td>01.10.2015</td>
@@ -77,7 +111,7 @@
 				<th>Päivämäärä</th>
 				<th>Treeniaika</th>
 				<th>Keskinopeus (km/h)</th>
-				<th>Kommentti</th>
+				<th>Lisätiedot</th>
 			</tr>
 			<tr>
 				<td>01.10.2015</td>
@@ -101,7 +135,7 @@
 				<th>Päivämäärä</th>
 				<th>Treeniaika</th>
 				<th>Laji</th>
-				<th>Kommentti</th>
+				<th>Lisätiedot</th>
 			</tr>
 			<tr>
 				<td>01.10.2015</td>
