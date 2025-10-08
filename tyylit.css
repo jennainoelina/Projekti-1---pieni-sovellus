@@ -34,6 +34,13 @@ h3 {
     font-size: 15px;
 }
 
+/* Ponnahdusikkunan muotoilu ja piilotus */
+#ponnahdusikkuna {
+    display: none;
+    
+    
+}
+
 /* Taulukkojen sijoitus ja muotoilu*/
 .taulukot {
     display: grid;
