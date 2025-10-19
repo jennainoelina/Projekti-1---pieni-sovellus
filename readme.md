@@ -27,7 +27,7 @@ Mutta yleisesti ottaen nautin kyllä tästä kurssista, tehtävistä ja opetukse
 ## Sisällysluettelo:
 
 - [Tietoja sovelluksesta](#tietoja-sovelluksesta)
-- [Tunnetut virheet](#Tunnetut virheet)
+- [Tunnetut virheet](#tunnetut-virheet)
 - [Kuvakaappaukset](#kuvakaappaukset)
 - [Teknologiat](#teknologiat)
 - [Asennus](#asennus)
