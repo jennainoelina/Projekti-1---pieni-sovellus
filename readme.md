@@ -49,6 +49,12 @@ Lisää tähän vähintään yksi kuvakaappaus toimivasta sovelluksesta
 
 Kuva: [Kelly Sikkema](https://unsplash.com/@kellysikkema)
 
+Kuvia toimivasta ohjelmasta:
+
+[ESIM1](./kuvat/ESIM1.png)
+[ESIM2](./kuvat/ESIM2.png)
+[ESIM3](./kuvat/ESIM3.png)
+
 ## Teknologiat
 Teknologioina käytin koodaamiseen Visual Studio Code -ohjelmaa sekä koodin tallennukseen GitHub:ia. Koodikielenä toimii HTML, CSS sekä JavaScript.
 
