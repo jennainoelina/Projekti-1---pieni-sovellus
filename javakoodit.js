@@ -43,6 +43,26 @@ function paivitalisakentat() {
 
 paivitalisakentat(); // Näytä lisäkentät heti
 
+// Laskee ja päivittää yhteenlasketun treeniajan
+function paivitaYhteensaAika() {
+    const treenit = JSON.parse(localStorage.getItem("treenit")) || [];
+    const lajit = ["sali", "juokseminen", "pyoraily", "ratsastus"];
+
+    lajit.forEach(laji => {
+        // Laskee yhteen kaikkien treenien kestot (minuutteina) tälle lajille
+        const yhteensaAika = treenit
+            .filter(t => t.laji === laji)
+            .reduce((summa, treeni) => summa + Number(treeni.kesto), 0);
+        
+        // Etsitään taulun yhteenvetosolu
+        const yhteensaSolu = document.getElementById(`${laji}-yhteensa`);
+        
+        if (yhteensaSolu) {
+            yhteensaSolu.textContent = `Treeniaika yhteensä: ${yhteensaAika} min`;
+        }
+    });
+}
+
 // Tallenna treeni taulukkoon
 tallennaBtn.onclick = () => {
     const laji = kategoriavalinta.value;
@@ -61,6 +81,10 @@ tallennaBtn.onclick = () => {
         if (!kesto) kestoInput.style.border = "2px solid red"; //punaiset reunat virheelliselle kohdalle
         return;
     }
+    // Poista punaiset reunat
+    paivamaaraInput.style.border = "";
+    kestoInput.style.border = "";
+
 
     if (isNaN(kesto) || Number(kesto) <= 0) { // Treeniajan täytyy olla enemmän kuin 0
         alert("Treeniajan täytyy olla positiivinen numero!");
@@ -70,7 +94,7 @@ tallennaBtn.onclick = () => {
 
     // Oikea taulukko
     const taulukko = document.querySelector(`table.${laji}`);
-    const rivi = taulukko.insertRow(-1);
+    const rivi = taulukko.insertRow(-1); 
 
     // Lisätään oikeat solut eri lajeille
     if (laji === "juokseminen" || laji === "pyoraily") {
@@ -110,12 +134,17 @@ tallennaBtn.onclick = () => {
     let treenit = JSON.parse(localStorage.getItem("treenit")) || [];
     treenit.push(treeni);
     localStorage.setItem("treenit", JSON.stringify(treenit));
+    
+    // Päivitetään yhteensä aika tallennuksen jälkeen
+    paivitaYhteensaAika();
 };
 
 // Tietojen hakeminen localStoragesta
 window.onload = () => {
     const treenit = JSON.parse(localStorage.getItem("treenit")) || [];
 
+    // Huom: Koska esimerkkirivit poistettiin HTML:stä, 
+    // tässä loopissa lisätään nyt vain LocalStoragesta ladatut treenit
     treenit.forEach(treeni => {
         const taulukko = document.querySelector(`table.${treeni.laji}`);
         const rivi = taulukko.insertRow(-1);
@@ -136,4 +165,7 @@ window.onload = () => {
             rivi.insertCell(3).textContent = treeni.lisatiedot;
         }
     });
+
+    // Lasketaan ja näytetään yhteensä aika sivun latautuessa
+    paivitaYhteensaAika();
 };

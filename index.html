@@ -1,156 +1,112 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="fi">
 
 <head>
-	<title>Treenipäiväkirja</title>
-	<meta charset="utf-8" />
-	<link rel="stylesheet" href="tyylit.css" />
+    <title>Treenipäiväkirja</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="tyylit.css" />
 </head>
 
 <script src="javakoodit.js" defer></script>
 
 <body>
 
-	<!-- Otsikko ja quote -->
     <h1>Treenipäiväkirja</h1>
     <h3>"Paras treeni on se, jonka teet."</h3>
 
-	<!-- Nappulat Lisää ja Poista -->
-	 <div class="nappulat">
-		<button class="lisaa">Lisää uusi treeni</button>
-		<button class="poista">Poista treeni</button>
-	</div>
+    <div class="nappulat">
+        <button class="lisaa">Lisää uusi treeni</button>
+        <button class="poista">Poista treeni</button>
+    </div>
 
-	<!-- Ponnahdusikkuna -->
-	 <div id="ponnahdusikkuna" class="ikkuna">
-		<div class="ikkunatiedot">
+    <div id="ponnahdusikkuna" class="ikkuna">
+        <div class="ikkunatiedot">
 
-			<span class="sulje">&times;</span> <!-- ruksi ikkunassa -->
-			<h3>Lisää uusi treeni</h3>
+            <span class="sulje">&times;</span> <h3>Lisää uusi treeni</h3>
 
-			<!-- Kategorian valinta -->
-			 <label for="kategoria">Laji: </label>
-			 <select id="kategoria">
-				<option value="juokseminen">Juoksu</option>
-				<option value="pyoraily">Pyöräily</option>
-				<option value="sali">Salitreeni</option>
-				<option value="ratsastus">Ratsastus</option>
-			 </select>
+            <label for="kategoria">Laji: </label>
+             <select id="kategoria">
+                 <option value="juokseminen">Juoksu</option>
+                 <option value="pyoraily">Pyöräily</option>
+                 <option value="sali">Salitreeni</option>
+                 <option value="ratsastus">Ratsastus</option>
+             </select>
 
-			<!-- Yhteiset kentät -->
-			<label for="paivamaara">Päivämäärä: </label>
-			<input type="text" id="paivamaara" placeholder="pp.kk.vvvv">
+            <label for="paivamaara">Päivämäärä: </label>
+            <input type="text" id="paivamaara" placeholder="pp.kk.vvvv">
 
 
-			<label for="kesto">Kesto (min): </label>
-			<input type="number" id="kesto">
+            <label for="kesto">Kesto (min): </label>
+            <input type="number" id="kesto">
 
-			<div id="lisakentat"></div> <!-- Lisäkentät -->
+            <div id="lisakentat"></div> <label for="lisatiedot">Lisätiedot: </label>
+            <textarea id="lisatiedot" rows="3"></textarea>
 
-			<label for="lisatiedot">Lisätiedot: </label>
-			<textarea id="lisatiedot" rows="3"></textarea>
+            <button id="tallenna">Tallenna</button>
 
-			<button id="tallenna">Tallenna</button>
+        </div>
+     </div>
 
-		</div>
-	 </div>
+    <div class="taulukot">
+        <table class="sali">
+            <tr>
+                <th colspan="3">Salitreeni</th>
+            </tr>
+            <tr>
+                <td colspan="3" id="sali-yhteensa"></td>
+            </tr>
+            <tr>
+                <th>Päivämäärä</th>
+                <th>Treeniaika</th>
+                <th>Lisätiedot</th>
+            </tr>
+            </table>
 
-	<!-- Treenitaulukot -->
-	<div class="taulukot">
-		<table class="sali">
-			<tr>
-				<th colspan="3">Salitreeni</th>
-			</tr>
-			<tr>
-				<th>Päivämäärä</th>
-				<th>Treeniaika</th>
-				<th>Lisätiedot</th>
-			</tr>
-			<tr>
-				<td>01.10.2015</td>
-				<td>30 min</td>
-				<td>Yläkroppa</td>
-			</tr>
-			<tr>
-				<td>02.10.2025</td>
-				<td>45 min</td>
-				<td>Alakroppa</td>
-			</tr>
-		</table>
+        <table class="juokseminen">
+            <tr>
+                <th colspan="4">Juokseminen</th>
+            </tr>
+            <tr>
+                <td colspan="4" id="juokseminen-yhteensa"></td>
+            </tr>
+            <tr>
+                <th>Päivämäärä</th>
+                <th>Treeniaika</th>
+                <th>Keskinopeus (km/h)</th>
+                <th>Lisätiedot</th>
+            </tr>
+            </table>
 
-		<table class="juokseminen">
-			<tr>
-				<th colspan="4">Juokseminen</th>
-			</tr>
-			<tr>
-				<th>Päivämäärä</th>
-				<th>Treeniaika</th>
-				<th>Keskinopeus (km/h)</th>
-				<th>Lisätiedot</th>
-			</tr>
-			<tr>
-				<td>01.10.2015</td>
-				<td>30 min</td>
-				<td>9.0</td>
-				<td>...</td>
-			</tr>
-			<tr>
-				<td>02.10.2025</td>
-				<td>45 min</td>
-				<td>8.5</td>
-				<td>...</td>
-			</tr>
-		</table>
+        <table class="pyoraily">
+            <tr>
+                <th colspan="4">Pyöräily</th>
+            </tr>
+            <tr>
+                <td colspan="4" id="pyoraily-yhteensa"></td>
+            </tr>
+            <tr>
+                <th>Päivämäärä</th>
+                <th>Treeniaika</th>
+                <th>Keskinopeus (km/h)</th>
+                <th>Lisätiedot</th>
+            </tr>
+            </table>
 
-		<table class="pyoraily">
-			<tr>
-				<th colspan="4">Pyöräily</th>
-			</tr>
-			<tr>
-				<th>Päivämäärä</th>
-				<th>Treeniaika</th>
-				<th>Keskinopeus (km/h)</th>
-				<th>Lisätiedot</th>
-			</tr>
-			<tr>
-				<td>01.10.2015</td>
-				<td>30 min</td>
-				<td>9.0</td>
-				<td>...</td>
-			</tr>
-			<tr>
-				<td>02.10.2025</td>
-				<td>45 min</td>
-				<td>8.5</td>
-				<td>...</td>
-			</tr>
-		</table>
-
-		<table class="ratsastus">
-			<tr>
-				<th colspan="4">Ratsastus</th>
-			</tr>
-			<tr>
-				<th>Päivämäärä</th>
-				<th>Treeniaika</th>
-				<th>Laji</th>
-				<th>Lisätiedot</th>
-			</tr>
-			<tr>
-				<td>01.10.2015</td>
-				<td>30 min</td>
-				<td>Esteratsastus</td>
-				<td>Valmennus</td>
-			</tr>
-			<tr>
-				<td>02.10.2025</td>
-				<td>45 min</td>
-				<td>Kouluratsastus</td>
-				<td>Itsenäinen</td>
-			</tr>
-		</table>
-	</div>
+        <table class="ratsastus">
+            <tr>
+                <th colspan="4">Ratsastus</th>
+            </tr>
+            <tr>
+                <td colspan="4" id="ratsastus-yhteensa"></td>
+            </tr>
+            <tr>
+                <th>Päivämäärä</th>
+                <th>Treeniaika</th>
+                <th>Laji</th>
+                <th>Lisätiedot</th>
+            </tr>
+            </table>
+    </div>
 
 </body>
 
