@@ -30,26 +30,26 @@
 			<h3>Lisää uusi treeni</h3>
 
 			<!-- Kategorian valinta -->
-			 <label for="kategoria">Laji: </label><br>
+			 <label for="kategoria">Laji: </label>
 			 <select id="kategoria">
 				<option value="juokseminen">Juoksu</option>
 				<option value="pyoraily">Pyöräily</option>
 				<option value="sali">Salitreeni</option>
 				<option value="ratsastus">Ratsastus</option>
-			 </select><br><br>
+			 </select>
 
 			<!-- Yhteiset kentät -->
-			<label for="paivamaara">Päivämäärä: </label><br>
-			<input type="date" id="paivamaara"><br><br>
+			<label for="paivamaara">Päivämäärä: </label>
+			<input type="text" id="paivamaara" placeholder="pp.kk.vvvv">
 
 
-			<label for="kesto">Kesto (min): </label><br>
-			<input type="number" id="kesto"><br><br>
+			<label for="kesto">Kesto (min): </label>
+			<input type="number" id="kesto">
 
 			<div id="lisakentat"></div> <!-- Lisäkentät -->
 
-			<label for="lisatiedot">Lisätiedot: </label><br>
-			<textarea id="lisatiedot" rows="3"></textarea><br><br>
+			<label for="lisatiedot">Lisätiedot: </label>
+			<textarea id="lisatiedot" rows="3"></textarea>
 
 			<button id="tallenna">Tallenna</button>
 
@@ -79,7 +79,7 @@
 			</tr>
 		</table>
 
-		<table class="juoksu">
+		<table class="juokseminen">
 			<tr>
 				<th colspan="4">Juokseminen</th>
 			</tr>

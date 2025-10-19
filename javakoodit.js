@@ -46,11 +46,27 @@ paivitalisakentat(); // Näytä lisäkentät heti
 // Tallenna treeni taulukkoon
 tallennaBtn.onclick = () => {
     const laji = kategoriavalinta.value;
-    const paivamaara = document.getElementById("paivamaara").value;
-    const kesto = document.getElementById("kesto").value;
+    const paivamaaraInput = document.getElementById("paivamaara");
+    const kestoInput = document.getElementById("kesto");
+    const paivamaara = paivamaaraInput.value;
+    const kesto = kestoInput.value;
     const lisatiedot = document.getElementById("lisatiedot").value;
     const nopeus = document.getElementById("nopeus")?.value || "";
     const ratsastustyyppi = document.getElementById("laji")?.value || "";
+
+    //Kenttien tarkistus
+    if (!paivamaara || !kesto) { //päivämäärä ja treenin kesto pakollinen
+        alert("Lisää päivämäärä sekä treenin kesto!");
+        if (!paivamaara) paivamaaraInput.style.border = "2px solid red"; //punaiset reunat virheelliselle kohdalle
+        if (!kesto) kestoInput.style.border = "2px solid red"; //punaiset reunat virheelliselle kohdalle
+        return;
+    }
+
+    if (isNaN(kesto) || Number(kesto) <= 0) { // Treeniajan täytyy olla enemmän kuin 0
+        alert("Treeniajan täytyy olla positiivinen numero!");
+        kestoInput.style.border = "2px solid red"; //punaiset reunat virheelliselle kohdalle
+        return;
+    }
 
     // Oikea taulukko
     const taulukko = document.querySelector(`table.${laji}`);
@@ -79,4 +95,45 @@ tallennaBtn.onclick = () => {
     document.getElementById("lisatiedot").value = "";
     lisakentat.innerHTML = "";
     ikkuna.style.display = "none";
+
+    // Luodaan treeniobjekti
+    const treeni = {
+        laji,
+        paivamaara,
+        kesto,
+        nopeus,
+        ratsastustyyppi,
+        lisatiedot
+    };
+
+    // Lisätään tiedot localStorageen
+    let treenit = JSON.parse(localStorage.getItem("treenit")) || [];
+    treenit.push(treeni);
+    localStorage.setItem("treenit", JSON.stringify(treenit));
+};
+
+// Tietojen hakeminen localStoragesta
+window.onload = () => {
+    const treenit = JSON.parse(localStorage.getItem("treenit")) || [];
+
+    treenit.forEach(treeni => {
+        const taulukko = document.querySelector(`table.${treeni.laji}`);
+        const rivi = taulukko.insertRow(-1);
+
+        if (treeni.laji === "juokseminen" || treeni.laji === "pyoraily") {
+            rivi.insertCell(0).textContent = treeni.paivamaara;
+            rivi.insertCell(1).textContent = `${treeni.kesto} min`;
+            rivi.insertCell(2).textContent = treeni.nopeus;
+            rivi.insertCell(3).textContent = treeni.lisatiedot;
+        } else if (treeni.laji === "sali") {
+            rivi.insertCell(0).textContent = treeni.paivamaara;
+            rivi.insertCell(1).textContent = `${treeni.kesto} min`;
+            rivi.insertCell(2).textContent = treeni.lisatiedot;
+        } else if (treeni.laji === "ratsastus") {
+            rivi.insertCell(0).textContent = treeni.paivamaara;
+            rivi.insertCell(1).textContent = `${treeni.kesto} min`;
+            rivi.insertCell(2).textContent = treeni.ratsastustyyppi;
+            rivi.insertCell(3).textContent = treeni.lisatiedot;
+        }
+    });
 };

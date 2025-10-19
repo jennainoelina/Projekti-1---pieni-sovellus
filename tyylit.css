@@ -34,11 +34,40 @@ h3 {
     font-size: 15px;
 }
 
-/* Ponnahdusikkunan muotoilu ja piilotus */
+/* Ponnahdusikkunan muotoilu */
 #ponnahdusikkuna {
     display: none;
-    
-    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    width: 300px;
+}
+
+.ikkunatiedot {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px; /* pienentää väliä elementtien välillä */
+}
+
+.sulje {
+    cursor: default;
+}
+
+.sulje:hover {
+    color: red;
+}
+
+#tallenna {
+    margin-top: 30px;
 }
 
 /* Taulukkojen sijoitus ja muotoilu*/
