@@ -53,6 +53,8 @@ Kuvia toimivasta ohjelmasta:
 ## Teknologiat
 Teknologioina käytin koodaamiseen Visual Studio Code -ohjelmaa sekä koodin tallennukseen GitHub:ia. Koodikielenä toimii HTML, CSS sekä JavaScript.
 
+Demovideo on kuvattu ... sovelluksella ja nähtävissä kuvat.fi palvelussa netin kautta.
+
 ## Asennus
 Kirjoita lyhyet ohjeet sovelluksen käynnistämiseen ja käyttöön. Esimerkiksi:  
 - Avaa sovellus selaimessa.
