@@ -55,8 +55,7 @@ Teknologioina käytin koodaamiseen Visual Studio Code -ohjelmaa sekä koodin tal
 
 Demovideo on kuvattu ... sovelluksella ja nähtävissä kuvat.fi palvelussa netin kautta.
 
-## Asennus
-Kirjoita lyhyet ohjeet sovelluksen käynnistämiseen ja käyttöön. Esimerkiksi:  
+## Asennus 
 - Avaa sovellus selaimessa.
 - Paina "Lisää uusi treeni".
 - Valitse oikea laji neljästä vaihtoehdosta.
