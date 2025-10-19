@@ -44,11 +44,6 @@ Salitreeniin ei saa lisättyä muuta infoa. Ratsastuksessa voi valita kouluratsa
 Koodatessa oli hetkellisesti vaikeuksia saada localStorage ja aikojen yhteenlasku toimimaan, joten en ole näiden osalta niin itsevarma toteutuksessa.
 
 ## Kuvakaappaukset
-Lisää tähän vähintään yksi kuvakaappaus toimivasta sovelluksesta  
-`![Kirjoittaminen](https://unsplash.com/photos/VBPzRgd7gfc)`
-
-Kuva: [Kelly Sikkema](https://unsplash.com/@kellysikkema)
-
 Kuvia toimivasta ohjelmasta:
 
 [ESIM1](./kuvat/ESIM1.png)
