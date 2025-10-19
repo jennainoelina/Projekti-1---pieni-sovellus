@@ -1,4 +1,4 @@
-# Projektin nimi ja tekijät
+# TREENIPÄIVÄKIRJA
 Projekti "Treenipäiväkirja" luojana Jenna Vahviala.
 
 ## Verkkolinkit:
