@@ -9,12 +9,11 @@ Linkki projektin videoesittelyyn ...
 Jenna Vahviala loi ja koodasi sovelluksen yksin.
 
 ## Oma arvio työstä ja oman osaamisen kehittymisestä
-Mielestäni onnistuin...
-Parantamista olisi...
-Sovelluksesta jäi puuttumaan...
-Koen, että olen oppinut...
-Epäselväksi jäi...
-Antaisin itselleni pisteitä seuraavasti: xx/yy p
+Mielestäni onnistuin idean sisäistämisessä hyvin ja suoritin tehtävän hyvissä ajoin.
+Parantamista olisi pitkien koodipätkien luomisessa.
+Sovelluksesta jäi puuttumaan "poista" nappulan toiminnallisuudet. Ajattelin kuitenkin lisätä sen sinne jatkoa ajatellen.
+Koen, että olen oppinut paljon Javascript koodien tekemisestä ja ymmärrän sen logiikan.
+Antaisin itselleni pisteitä seuraavasti: 9/10 p
 
 ## Palaute opettajalle kurssista sekä itse opetuksesta tähän saakka
 Kurssi sekä lähiopetus ovat tuntuneet todella hyödyllisiltä. Workshopit ovat auttaneet tehtävien ymmärtämisessä kun apua on saatavilla helposti.
@@ -28,13 +27,12 @@ Mutta yleisesti ottaen nautin kyllä tästä kurssista, tehtävistä ja opetukse
 ## Sisällysluettelo:
 
 - [Tietoja sovelluksesta](#tietoja-sovelluksesta)
-- [Tunnetut virheet/bugit](#Tunnetut virheet/bugit)
+- [Tunnetut virheet](#Tunnetut virheet)
 - [Kuvakaappaukset](#kuvakaappaukset)
 - [Teknologiat](#teknologiat)
 - [Asennus](#asennus)
-- [Lähestymistapa](#lähestymistapa)
+- [Asennus](#asennus)
 - [Kiitokset](#kiitokset)
-- [Lisenssi](#lisenssi)
 
 ## Tietoja sovelluksesta
 Treenipäiväkirja on sovellus, johon pystyy lisäämään tietoja tehdyistä treeneistä. Lisätyt tiedot näkee taulukoista jaoteltuna omiin kategorioihinsa.
@@ -42,8 +40,8 @@ Kategorioita on x määrä: juoksu, pyöräily, sali, ratsastus ...?
 Kaikkiin kategorioihin lisätään päivämäärä, käytetty aika sekä halutessaan kommentoida treeniä. Juoksuun ja pyöräilyyn saa lisäksi lisättyä keskinopeuden.
 Salitreeniin ei saa lisättyä muuta infoa. Ratsastuksessa voi valita kouluratsastuksen, esteratsastuksen, maaston ja maastoesteratsastuksen väliltä.
 
-## Tunnetut virheet/bugit
-Kerro jos tiedät sovelluksessa olevan jotain, mikä ei toimi tai toimii heikosti
+## Tunnetut virheet
+Koodatessa oli hetkellisesti vaikeuksia saada localStorage ja aikojen yhteenlasku toimimaan, joten en ole näiden osalta niin itsevarma toteutuksessa.
 
 ## Kuvakaappaukset
 Lisää tähän vähintään yksi kuvakaappaus toimivasta sovelluksesta  
@@ -52,22 +50,18 @@ Lisää tähän vähintään yksi kuvakaappaus toimivasta sovelluksesta
 Kuva: [Kelly Sikkema](https://unsplash.com/@kellysikkema)
 
 ## Teknologiat
-Kuvaa, mitä teknologioita käytettiin ja mikä oli niiden rooli projektissasi.  
-Käytin seuraavia teknologioita: `html`, `css`, ...
+Teknologioina käytin koodaamiseen Visual Studio Code -ohjelmaa sekä koodin tallennukseen GitHub:ia. Koodikielenä toimii HTML, CSS sekä JavaScript.
 
 ## Asennus
 Kirjoita lyhyet ohjeet sovelluksen käynnistämiseen ja käyttöön. Esimerkiksi:  
-- lataa kaikki tiedostot ja avaa index.html selaimessasi  
-- lataa tai kloonaa repositorio  
-- suorita `npm install`  
-- ...
+- Avaa sovellus selaimessa.
+- Paina "Lisää uusi treeni".
+- Valitse oikea laji neljästä vaihtoehdosta.
+- Lisää tarvittavat tiedot. Pakollisena päivämäärä sekä kesto.
+- Paina "tallenna".
+- Tiedot tallentuvat valitsemasi lajin taulukkoon ja treeniaikojen yhteenlaskettu summa näkyy sekä kategoriakohtaisesti että kokonaisuudessaan.
+
 
 ## Kiitokset
-Lista lähteistä ja esimerkeistä, joita käytit projektin aikana. Mainitse myös, jos käytit ChatGPT:tä tai muita tekoälytyökaluja koodauksen aikana ja kerro, miten ne auttoivat sinua.  
-- [John Doe](johndoe.com)  
-- [Beginners guide to BEM](link-goes-here.com)  
-
-## Lisenssi
-Valitse projektille lisenssi seuraamalla tätä [opasta](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository).
-
-Esimerkki: MIT-lisenssi @ [tekijä](author.com)
+- AI - oikeiden koodipätkien etsiminen ja koodien selittäminen
+- W3schools (www.w3schools.com) - koodien etsiminen ja esimerkit

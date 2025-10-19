@@ -5,6 +5,7 @@ const suljeBtn = document.querySelector(".sulje");
 const tallennaBtn = document.getElementById("tallenna");
 const kategoriavalinta = document.getElementById("kategoria");
 const lisakentat = document.getElementById("lisakentat");
+const kokonaisYhteensaDiv = document.getElementById("kokonais-yhteensa"); // HUOM: Tämän id:n oletetaan olevan HTML-tiedostossa
 
 // Avaa ja sulje
 avaaBtn.onclick = () => {
@@ -43,6 +44,31 @@ function paivitalisakentat() {
 
 paivitalisakentat(); // Näytä lisäkentät heti
 
+// Laskee ja päivittää kaikkien treenien kokonaisajan
+function paivitaKokonaisYhteensaAika() {
+    const treenit = JSON.parse(localStorage.getItem("treenit")) || [];
+    
+    // Lasketaan kaikkien treenien kestojen summa
+    const kokonaisAikaMinuuteissa = treenit.reduce((summa, treeni) => summa + Number(treeni.kesto), 0);
+    
+    // Näytetään kaikkien treenien kokonaisaika
+    if (kokonaisYhteensaDiv) {
+        const tunnit = Math.floor(kokonaisAikaMinuuteissa / 60);
+        const minuutit = kokonaisAikaMinuuteissa % 60;
+        
+        let tunnitTeksti = "";
+        if (tunnit > 0) {
+            tunnitTeksti = `${tunnit} t ${minuutit} min`;
+        } else {
+            tunnitTeksti = `${minuutit} min`;
+        }
+        
+        kokonaisYhteensaDiv.innerHTML = `
+            <h2>Kokonaisaika: <strong>${kokonaisAikaMinuuteissa} min</strong> (${tunnitTeksti})</h2>
+        `;
+    }
+}
+
 // Laskee ja päivittää yhteenlasketun treeniajan
 function paivitaYhteensaAika() {
     const treenit = JSON.parse(localStorage.getItem("treenit")) || [];
@@ -54,13 +80,15 @@ function paivitaYhteensaAika() {
             .filter(t => t.laji === laji)
             .reduce((summa, treeni) => summa + Number(treeni.kesto), 0);
         
-        // Etsitään taulun yhteenvetosolu
-        const yhteensaSolu = document.getElementById(`${laji}-yhteensa`);
+        const yhteensaSolu = document.getElementById(`${laji}-yhteensa`); // Etsitään taulun yhteenvetosolu
         
         if (yhteensaSolu) {
             yhteensaSolu.textContent = `Treeniaika yhteensä: ${yhteensaAika} min`;
         }
     });
+
+    // Päivitetään kaikkien treenien kokonaisaika
+    paivitaKokonaisYhteensaAika(); 
 }
 
 // Tallenna treeni taulukkoon
@@ -143,8 +171,6 @@ tallennaBtn.onclick = () => {
 window.onload = () => {
     const treenit = JSON.parse(localStorage.getItem("treenit")) || [];
 
-    // Huom: Koska esimerkkirivit poistettiin HTML:stä, 
-    // tässä loopissa lisätään nyt vain LocalStoragesta ladatut treenit
     treenit.forEach(treeni => {
         const taulukko = document.querySelector(`table.${treeni.laji}`);
         const rivi = taulukko.insertRow(-1);
