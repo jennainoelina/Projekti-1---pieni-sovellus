@@ -36,7 +36,7 @@ Mutta yleisesti ottaen nautin kyllä tästä kurssista, tehtävistä ja opetukse
 
 ## Tietoja sovelluksesta
 Treenipäiväkirja on sovellus, johon pystyy lisäämään tietoja tehdyistä treeneistä. Lisätyt tiedot näkee taulukoista jaoteltuna omiin kategorioihinsa.
-Kategorioita on x määrä: juoksu, pyöräily, sali, ratsastus ...?
+Kategorioita on 4: juoksu, pyöräily, sali, ratsastus.
 Kaikkiin kategorioihin lisätään päivämäärä, käytetty aika sekä halutessaan kommentoida treeniä. Juoksuun ja pyöräilyyn saa lisäksi lisättyä keskinopeuden.
 Salitreeniin ei saa lisättyä muuta infoa. Ratsastuksessa voi valita kouluratsastuksen, esteratsastuksen, maaston ja maastoesteratsastuksen väliltä.
 
