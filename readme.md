@@ -2,8 +2,8 @@
 Projekti "Treenipäiväkirja" luojana Jenna Vahviala.
 
 ## Verkkolinkit:
-Pääset julkaistuun sovellukseen osoitteessa ...
-Linkki projektin videoesittelyyn ...
+Pääset julkaistuun sovellukseen osoitteessa https://treenipaevakirja.netlify.app/
+Linkki projektin videoesittelyyn https://fotovahviala.kuvat.fi/i/jr3VxvFdkpMfZU46BWGDhytYJqNnScQ5
 
 ## Työn jakautuminen 
 Jenna Vahviala loi ja koodasi sovelluksen yksin.
