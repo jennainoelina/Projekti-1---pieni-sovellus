@@ -5,7 +5,7 @@ const suljeBtn = document.querySelector(".sulje");
 const tallennaBtn = document.getElementById("tallenna");
 const kategoriavalinta = document.getElementById("kategoria");
 const lisakentat = document.getElementById("lisakentat");
-const kokonaisYhteensaDiv = document.getElementById("kokonais-yhteensa"); // HUOM: Tämän id:n oletetaan olevan HTML-tiedostossa
+const kokonaisYhteensaDiv = document.getElementById("kokonais-yhteensa");
 
 // Avaa ja sulje
 avaaBtn.onclick = () => {

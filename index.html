@@ -11,20 +11,23 @@
 
 <body>
 
+    <!-- Otsikko ja lisätekstiä -->
     <h1>Treenipäiväkirja</h1>
     <h3>"Paras treeni on se, jonka teet."</h3>
 
+    <!-- Nappulat -->
     <div class="nappulat">
         <button class="lisaa">Lisää uusi treeni</button>
         <button class="poista">Poista treeni</button>
     </div>
 
+    <!-- Ponnahdusikkuna ja sen sisältö -->
     <div id="ponnahdusikkuna" class="ikkuna">
         <div class="ikkunatiedot">
 
             <span class="sulje">&times;</span> <h3>Lisää uusi treeni</h3>
 
-            <label for="kategoria">Laji: </label>
+            <label for="kategoria">Laji: </label> <!-- kategorian valinta -->
              <select id="kategoria">
                  <option value="juokseminen">Juoksu</option>
                  <option value="pyoraily">Pyöräily</option>
@@ -39,7 +42,7 @@
             <label for="kesto">Kesto (min): </label>
             <input type="number" id="kesto">
 
-            <div id="lisakentat"></div> <label for="lisatiedot">Lisätiedot: </label>
+            <div id="lisakentat"></div> <label for="lisatiedot">Lisätiedot: </label> <!-- Lisäkentät -->
             <textarea id="lisatiedot" rows="3"></textarea>
 
             <button id="tallenna">Tallenna</button>
@@ -47,8 +50,9 @@
         </div>
      </div>
 
-	<div id="kokonais-yhteensa"></div>
+	<div id="kokonais-yhteensa"></div> <!-- Kokonaisaika yhteensä -->
 
+    <!-- Taulukot 4kpl -->
     <div class="taulukot">
         <table class="sali">
             <tr>

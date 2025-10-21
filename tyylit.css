@@ -65,7 +65,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 6px; /* pienentää väliä elementtien välillä */
+    gap: 6px;
 }
 
 .sulje {
